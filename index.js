@@ -2,13 +2,12 @@ const axios = require('axios');
 
 const acess = {
     urlPayPal: 'https://api.sandbox.paypal.com',
-    username: 'AX6aVimi3YCsMecXkFeme7ju8i6C6tX0_HIjdOEWjlbP4WPCz4SsX9Aq_eOSP0EVCVAwGBD114_azRKt',
-    password: 'EBb7ZiTEnjHZEWyIBLMK2i24yfHu_3LhunzlJ9jPIXvG6AKho9Vvi66ke68sJ0rfoTttO_sFXrP_10PN'
+    username: 'Ae_Ghn2r6iRC1nD5FEoYW8ODjC1CwrLDXqu-dNkc6JowQbmq7o3MTwn9Uq4G34zEhGdZsXXwM07HK5Db',
+    password: 'EH9IUi88cLj4YhRPUH6U4CwNotUJnjJw7_fJwHzrdguOViTMWVakJcDZlCxGcFnZyxNyiURdjbsgSHVu'
 };
 
 const api = axios.create({
     baseURL: acess.urlPayPal,
-
 });
 
 //--------------- Inicio
@@ -20,11 +19,12 @@ async function start() {
     const content = {};
 
     await loginPayPal(content);
+    await showOrders();
+    // await authorizePayment()
 
-    console.log(content)
+    // console.log(content)
 
 }
-
 
 //---------------- Final
 
@@ -43,6 +43,7 @@ async function loginPayPal(content) {
             },
         });
 
+        api.defaults.headers.common['Authorization'] = `Bearer ${data.access_token}`;
         content.access = data;
 
     } catch (e) {
@@ -51,4 +52,60 @@ async function loginPayPal(content) {
 
 }
 
-async
+async function createOrder(content) {
+
+    try {
+
+        const params = {
+            intent: "AUTHORIZE",
+            purchase_units: [
+                {
+                    "amount": {
+                        "currency_code": "BRL",
+                        "value": "1.00"
+                    }
+                }
+            ]
+        };
+
+        const {data} = await api.post('/v2/checkout/orders', params);
+
+        content.order = data;
+
+    } catch (e) {
+        console.log(e)
+    }
+
+}
+
+async function showOrders() {
+
+    try {
+
+        const {data} = await api.get('/v2/checkout/orders/9A9973155P078244N');
+        console.log(data.purchase_units)
+
+        // content.order = data;
+
+    } catch (e) {
+        console.log(e)
+    }
+
+}
+
+// async function authorizePayment() {
+//
+//     try {
+//
+//         const {data} = await api.get(`/v2/checkout/orders/9A9973155P078244N/authorize`);
+//         console.log(data)
+//
+//         // content.order = data;
+//
+//     } catch (e) {
+//         console.log(e)
+//     }
+//
+// }
+
+
