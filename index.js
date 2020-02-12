@@ -1,4 +1,5 @@
 const axios = require('axios');
+const inquirer = require('inquirer');
 
 const acess = {
     urlPayPal: 'https://api.sandbox.paypal.com',
@@ -16,13 +17,84 @@ start();
 
 async function start() {
 
-    const content = {};
+    const content = {
+        interaction: {
+            isStart: null,
+            isCreate: false,
+            isFinanced: false,
+            isAuthorized: false,
+            orderValue: 0.00
+        }
+    };
 
-    await loginPayPal(content);
-    await showOrders();
-    // await authorizePayment()
+    const prompt = inquirer.createPromptModule();
 
-    // console.log(content)
+    const response1 = await prompt({
+        type: 'rawlist',
+        name: 'value',
+        message: 'Iniciando pagamento PayPal.',
+        choices: [
+            {
+                name: 'Fazer Pagamento',
+                value: true
+            },
+            {
+                name: 'Cancelar',
+                value: false
+            }
+        ]
+    });
+    content.interaction.isStart = response1.value;
+
+    if (content.interaction.isStart) {
+
+        await loginPayPal(content);
+        const response = await prompt({
+            type: 'number',
+            name: 'value',
+            message: 'Informe o valor da compra. R$0.00'
+        });
+        content.interaction.orderValue = response.value;
+
+        await createOrder(content);
+
+
+        while (!content.interaction.isFinish) {
+
+            if (content.interaction.isCreate) {
+                console.log('Falta pouco para receber seu pagamento.');
+                console.log(`Aprove o pagamento pelo link: ${showLinkApprove(content)}`);
+            }
+
+            const response2 = await prompt({
+                type: 'list',
+                name: 'value',
+                message: 'Pagamento autorizado?',
+                choices: [
+                    {
+                        name: 'Sim',
+                        value: true
+                    },
+                    {
+                        name: 'Não',
+                        value: false
+                    }
+                ]
+            });
+
+            const status = await showStatusOrder(content);
+
+            if (status == "APPROVED") {
+                await capturePayment(content);
+            }
+
+        }
+
+    }
+
+
+    // await capturePayment();
+    // await showOrders(content);
 
 }
 
@@ -57,20 +129,20 @@ async function createOrder(content) {
     try {
 
         const params = {
-            intent: "AUTHORIZE",
+            intent: "CAPTURE",
             purchase_units: [
                 {
                     "amount": {
                         "currency_code": "BRL",
-                        "value": "1.00"
+                        "value": content.interaction.orderValue
                     }
                 }
             ]
         };
 
         const {data} = await api.post('/v2/checkout/orders', params);
-
         content.order = data;
+        content.interaction.isCreate = true;
 
     } catch (e) {
         console.log(e)
@@ -78,14 +150,13 @@ async function createOrder(content) {
 
 }
 
-async function showOrders() {
+async function showStatusOrder(content) {
 
     try {
 
-        const {data} = await api.get('/v2/checkout/orders/9A9973155P078244N');
-        console.log(data.purchase_units)
+        const {data} = await api.get(`/v2/checkout/orders/51055589C9161644S`);
 
-        // content.order = data;
+        return data.status;
 
     } catch (e) {
         console.log(e)
@@ -93,19 +164,27 @@ async function showOrders() {
 
 }
 
-// async function authorizePayment() {
-//
-//     try {
-//
-//         const {data} = await api.get(`/v2/checkout/orders/9A9973155P078244N/authorize`);
-//         console.log(data)
-//
-//         // content.order = data;
-//
-//     } catch (e) {
-//         console.log(e)
-//     }
-//
-// }
+async function capturePayment(content) {
+
+    try {
+
+        api.defaults.headers.post['Content-Type'] = 'application/json';
+        const {data} = await api.post(`/v2/checkout/orders/${content.order.id}/capture`);
+
+        console.log('Pagamento realizado com sucesso');
+
+        content.interaction.isFinanced = true;
+
+    } catch (e) {
+        console.log(e)
+    }
+
+}
+
+function showLinkApprove(content) {
+    const url = `https://www.sandbox.paypal.com/checkoutnow?token=${content.order.id}`;
+    return url;
+}
+
 
 
