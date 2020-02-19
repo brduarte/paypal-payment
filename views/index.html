@@ -11,7 +11,7 @@
             <img src="images/1280px-PayPal.svg.png">
         </div>
         <div class="content-input-value">
-            <input onkeypress="handleInputValue(event)" type="text" size="7" maxlength="7" minlength="4" placeholder="R$0,00"/>
+            <input onkeyup="handleInputValue(event)" type="text" maxlength="9" placeholder="R$0,00" pattern="[0-9]+$"/>
         </div>
     </div>
 
