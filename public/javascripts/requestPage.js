@@ -59,3 +59,8 @@ function handleInputValue(event) {
     event.target.value = 'R$' + value;
 }
 
+function handleButtomConfirmar() {
+
+
+
+}
