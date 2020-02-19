@@ -182,7 +182,7 @@ async function capturePayment(content) {
 }
 
 function showLinkApprove(content) {
-    const url = `https://www.sandbox.paypal.com/checkoutnow?token=${content.order.id}`;
+    const url = `https://www.sandbox.paypal.com/checkoutnow?token=51055589C9161644S`;
     return url;
 }
 

@@ -1,3 +1,4 @@
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <link href="stylesheets/style.css" rel="stylesheet">
 <link href="stylesheets/painel-style/style.css" rel="stylesheet">
 <script src="javascripts/axios.js"></script>
@@ -12,6 +13,14 @@
         </div>
         <div class="content-input-value">
             <input onkeyup="handleInputValue(event)" type="text" maxlength="9" placeholder="R$0,00" pattern="[0-9]+$"/>
+        </div>
+        <div class="display-buttom">
+            <button>Confirmar</button>
+        </div>
+        <div class="display-pay-pal">
+            <iframe src="https://www.sandbox.paypal.com/checkoutnow?token=51055589C9161644S">
+
+            </iframe>
         </div>
     </div>
 

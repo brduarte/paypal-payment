@@ -44,3 +44,25 @@
 .content-input-value input::placeholder {
     color: #e5e5e5;
 }
+
+.display-buttom button {
+    width: 100%;
+    padding: 5px;
+    background: #203881;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-family: "Roboto";
+    font-size: 22px;
+
+
+}
+
+.display-pay-pal iframe {
+    border: none;
+    width: 100%;
+    height: 400px;
+    margin-top: 5px;
+    display: none;
+}
