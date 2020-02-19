@@ -1,37 +1,47 @@
 .painel-primary {
     display: flex;
-    margin: 0 auto 0 auto;
-    width: 60%;
-    border: 1px solid red;
-    height: 60vh;
-}
-
-.lista-produtos {
-    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
     justify-content: center;
-    background: white;
-    margin: 5px;
-    list-style-type: none;
-    flex-wrap: wrap;
 }
 
-.lista-produtos li {
-    border: 1px solid red;
-    margin: 2px;
-    width: 150px;
-    height: 40px;
-    flex-grow: 1;
-
-}
 
 .painel-calc {
-    width: 40%;
-    margin: 5px;
+    width: 25%;
     background: white;
-    border: 1px solid red;
-    margin-left: auto;
+    -webkit-box-shadow: 10px 7px 19px -16px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 7px 19px -16px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 7px 19px -16px rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.painel-list {
-    width: 60%;
+.hader-logo {
+    margin: auto;
+    width: 70%;
+}
+
+.hader-logo img {
+    width: 100%;
+}
+
+
+.content-input-value input {
+    border: 2px solid #F5F5F5;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 50px;
+    font-weight: bold;
+    color: #203881;
+    text-align: center;
+}
+
+.content-input-value input:hover {
+    border-color: #203881;
+}
+
+.content-input-value input::placeholder {
+    color: #e5e5e5;
 }

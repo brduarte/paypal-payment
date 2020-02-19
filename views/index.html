@@ -1,29 +1,18 @@
 <link href="stylesheets/style.css" rel="stylesheet">
 <link href="stylesheets/painel-style/style.css" rel="stylesheet">
+<script src="javascripts/axios.js"></script>
+<script src="javascripts/requestPage.js"></script>
+
 
 <div class="painel-primary">
 
-
-    <div class="painel-list">
-        <ul class="lista-produtos">
-            <li>
-                <p>Produto 1</p>
-            </li>
-            <li>
-                <p>Produto 1</p>
-            </li>
-            <li>
-                <p>Produto 1</p>
-            </li>
-            <li>
-                <p>Produto 1</p>
-            </li>
-        </ul>
-    </div>
-
-
     <div class="painel-calc">
-        <h1>calculos</h1>
+        <div class="hader-logo">
+            <img src="images/1280px-PayPal.svg.png">
+        </div>
+        <div class="content-input-value">
+            <input onkeypress="handleInputValue(event)" type="text" size="7" maxlength="7" minlength="4" placeholder="R$0,00"/>
+        </div>
     </div>
 
 </div>
