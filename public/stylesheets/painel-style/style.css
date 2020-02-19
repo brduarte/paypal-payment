@@ -1,0 +1,37 @@
+.painel-primary {
+    display: flex;
+    margin: 0 auto 0 auto;
+    width: 60%;
+    border: 1px solid red;
+    height: 60vh;
+}
+
+.lista-produtos {
+    display: flex;
+    justify-content: center;
+    background: white;
+    margin: 5px;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.lista-produtos li {
+    border: 1px solid red;
+    margin: 2px;
+    width: 150px;
+    height: 40px;
+    flex-grow: 1;
+
+}
+
+.painel-calc {
+    width: 40%;
+    margin: 5px;
+    background: white;
+    border: 1px solid red;
+    margin-left: auto;
+}
+
+.painel-list {
+    width: 60%;
+}
