@@ -1,15 +1,13 @@
 const PayPalService = require('../services/PayPalService');
 
-class PaymentContoller {
+const payPalService = new PayPalService();
 
-    constructor(payPalService) {
-        payPalService = new PayPalService();
-    }
-
-    static test(req, res) {
-        res.json('oi bruno maciel');
-    }
-
+async function createOrder(req, res) {
+    // const response = await payPalService.createOrder('1.00');
+    res.json('response');
 }
 
-module.exports = PaymentContoller;
+
+module.exports = {
+    createOrder,
+};

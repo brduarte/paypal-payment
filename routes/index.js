@@ -8,6 +8,6 @@ router.get('/', function (req, res) {
     res.render('index', {title: 'Express'});
 });
 
-router.get('/teste', paymentContoller.test);
+router.get('/teste', paymentContoller.createOrder);
 
 module.exports = router;
