@@ -40,12 +40,12 @@ class PaymentContoller {
             const {status} = await payPalService.showOrder(id_order);
 
             if (!id_order) throw {
-                mensagem: 'Id order é obrigatorio'
+                mensagem: 'id_order order é obrigatorio.'
             };
 
             if (status !== 'APPROVED') {
                 throw {
-                    mensagem: 'Pagamento aguardando aprovação ou já foi completado.'
+                    mensagem: 'Pagamento aguardando autorização.'
                 };
             }
 
