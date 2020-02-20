@@ -2,11 +2,14 @@ const api = axios.create({
     baseURL: 'http://localhost:3000'
 });
 
-start();
-
-async function start() {
-    const content = {};
-}
+const content = {};
+const elements = {
+    buttons: {
+        btnConfirmar: document.getElementById('btnConfirmar'),
+        btnPagar: document.getElementById('btnPagar'),
+        btnSincronizar: document.getElementById('btnSincronizar')
+    }
+};
 
 function handleInputValue(event) {
     let value = event.target.value;
@@ -56,11 +59,23 @@ function handleInputValue(event) {
             break;
     }
 
+    content.value = value.replace(',', '.');
     event.target.value = 'R$' + value;
 }
 
 function handleButtomConfirmar() {
+    api.post('/create-order', {value: content.value}).then(response => {
+        const {data} = response;
+        content.order = data;
+    });
+}
 
+function handleButtomPagar() {
+    if (content.order) {
+        window.open(content.order.link.href);
+    }
+}
 
+function handleDisplayButtons() {
 
 }

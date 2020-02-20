@@ -6,7 +6,7 @@ class PaymentContoller {
 
     /*
      * Metodo para criar um order no PayPal e retornar o link de para aprovação do usuário
-    */
+     */
     static async createOrder(req, res) {
 
         try {
@@ -38,6 +38,5 @@ class PaymentContoller {
     }
 
 }
-
 
 module.exports = PaymentContoller;

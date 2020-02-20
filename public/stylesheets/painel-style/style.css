@@ -28,10 +28,10 @@
 
 .content-input-value input {
     border: 2px solid #F5F5F5;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
     width: 100%;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: bold;
     color: #203881;
     text-align: center;
@@ -48,15 +48,29 @@
 .display-buttom button {
     width: 100%;
     padding: 10px;
-    background: #203881;
-    color: white;
-    border: none;
-    margin-top: 10px;
-    border-radius: 5px;
     font-family: "Roboto";
     font-size: 22px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+    border: none;
+}
+
+.display-buttom .btn-confirmar {
+    background: #203881;
+    border-color: #203881;
+
+}
+
+.display-buttom .btn-pagar {
+    background: #218838;
+    border-color: #218838;
+    display: none;
+}
 
 
+.display-pay-pal {
+    display: none;
 }
 
 .display-pay-pal iframe {
@@ -64,5 +78,4 @@
     width: 100%;
     height: 400px;
     margin-top: 5px;
-    display: none;
 }
