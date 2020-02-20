@@ -10,14 +10,17 @@
             <img src="images/1280px-PayPal.svg.png">
         </div>
         <div class="content-input-value">
-            <input id="inputValue" onkeyup="handleInputValue(event)" type="text" maxlength="9" placeholder="R$0,00" pattern="[0-9]+$"/>
+            <input id="inputValue" onkeyup="handleInputValue(event)" type="text" maxlength="9" placeholder="R$0,00"
+                   pattern="[0-9]+$"/>
         </div>
         <div class="display-buttom">
-            <button id="btnConfirmar" class="btn-confirmar" type="button" onclick="handleButtomConfirmar(event)">
+            <button id="btnConfirmar" class="btn-confirmar" type="button" onclick="handleButtomConfirmar()">
                 Confirmar
             </button>
             <button id="btnPagar" class="btn-pagar" type="button" onclick="handleButtomPagar()">Pagar</button>
-            <button id="btnSincronizar" class="btn-sincronizar" type="button">Sincronizar</button>
+            <button id="btnSincronizar" class="btn-sincronizar" type="button" onclick="handleButtonSincronizar()">
+                Sincronizar
+            </button>
         </div>
         <div id="displayiframe" class="display-pay-pal">
         </div>

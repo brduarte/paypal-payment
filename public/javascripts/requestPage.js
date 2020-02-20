@@ -89,3 +89,10 @@ function handleButtomConfirmar() {
         }
     });
 }
+
+function handleButtonSincronizar() {
+    api.post('/create-order', {value: content.order.id}).then(response => {
+        const {data} = response;
+        console.log(data)
+    });
+}
