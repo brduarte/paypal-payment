@@ -1,30 +1,32 @@
-const api = require('axios');
+const axios = require('axios');
 
 const acess = {
     urlPayPal: 'https://api.sandbox.paypal.com',
-    username: 'Ae_Ghn2r6iRC1nD5FEoYW8ODjC1CwrLDXqu-dNkc6JowQbmq7o3MTwn9Uq4G34zEhGdZsXXwM07HK5Db',
-    password: 'EH9IUi88cLj4YhRPUH6U4CwNotUJnjJw7_fJwHzrdguOViTMWVakJcDZlCxGcFnZyxNyiURdjbsgSHVu'
+    username: 'AW533V1aK0mHQhlqcJ9bi6XuUzOBQTJYNW7ttrDSg2Y87HlNu7YQ_Pu1KhImqZc5vbf9s2XtCQ2U8ydz',
+    password: 'EFQ5i7d3rgxDNeRCTU2AihSsm7Dwgsb-HcKF1SK6uVVVM0CB265kgcWNRTC5xwpam9xPWh3vTPTyC4P1'
 };
 
-api.create({
-    baseURL: acess.urlPayPal,
+const api = axios.create({
+    baseURL: acess.urlPayPal
 });
+
+// api.create({
+//     baseURL: acess.urlPayPal,
+// });
 
 class PayPalService {
 
     constructor() {
-        console.log('oi bruno')
         this.loginPayPal();
     }
 
     async loginPayPal() {
 
         try {
-
             //Usando application/x-www-form-urlencoded format
             const params = new URLSearchParams();
             params.append('grant_type', 'client_credentials');
-            const {data} = await api.post('/v1/oauth2/token', params, {
+            const {data} = await api.post(acess.urlPayPal + '/v1/oauth2/token', params, {
                 auth: {
                     username: acess.username,
                     password: acess.password,
