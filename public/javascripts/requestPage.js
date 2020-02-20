@@ -66,22 +66,26 @@ function handleInputValue(event) {
     event.target.value = 'R$' + value;
 }
 
+function handleButtomPagar() {
+    if (content.order) {
+        window.open(content.order.link.href);
+    }
+}
+
+function handleDisplay() {
+    elements.buttons.btnConfirmar.style.display = 'none';
+    elements.buttons.btnPagar.style.display = 'block';
+    elements.buttons.btnSincronizar.style.display = 'block';
+    elements.inputs.inputValue.disabled = true;
+}
+
 function handleButtomConfirmar() {
     api.post('/create-order', {value: content.value}).then(response => {
         const {data} = response;
 
         if (data.status === 'CREATED') {
             content.order = data;
-            elements.buttons.btnConfirmar.style.display = 'none';
-            elements.buttons.btnPagar.style.display = 'block';
-            elements.buttons.btnSincronizar.style.display = 'block';
-            elements.inputs.inputValue.disabled = true;
+            handleDisplay();
         }
     });
-}
-
-function handleButtomPagar() {
-    if (content.order) {
-        window.open(content.order.link.href);
-    }
 }

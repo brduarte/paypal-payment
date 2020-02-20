@@ -56,9 +56,8 @@
     border-radius: 5px;
     margin-top: 10px;
     color: white;
-    border: none;
     transition: 0.5s;
-
+    border: 1px solid white;
 }
 
 .display-buttom .btn-confirmar {
@@ -79,14 +78,21 @@
 }
 
 .display-buttom .btn-pagar:hover {
-    background: #32b94f;
-    border-color: #32b94f;
+    background: rgba(46, 167, 74, 0.89);
+    border-color: rgba(46, 167, 74, 0.89);
 }
 
 .display-buttom .btn-sincronizar {
-    background: whitesmoke;
-    border-color: white;
-    display: none;
+    background: #F5F5F5;
+    border-color: #F5F5F5;
+    display: block;
+    color: silver;
+}
+
+.display-buttom .btn-sincronizar:hover {
+    background-color: #ffffff;
+    border-color: silver;
+    color: #d6d6d6;
 }
 
 .display-pay-pal {
