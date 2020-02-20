@@ -6,7 +6,6 @@
     justify-content: center;
 }
 
-
 .painel-calc {
     width: 25%;
     background: white;
@@ -45,6 +44,10 @@
     color: #e5e5e5;
 }
 
+.content-input-value input:disabled {
+    border-color: white;
+}
+
 .display-buttom button {
     width: 100%;
     padding: 10px;
@@ -54,20 +57,37 @@
     margin-top: 10px;
     color: white;
     border: none;
+    transition: 0.5s;
+
 }
 
 .display-buttom .btn-confirmar {
     background: #203881;
     border-color: #203881;
+}
 
+.display-buttom .btn-confirmar:hover {
+    background: #0F9CD8;
+    border-color: #0F9CD8;
 }
 
 .display-buttom .btn-pagar {
     background: #218838;
     border-color: #218838;
     display: none;
+
 }
 
+.display-buttom .btn-pagar:hover {
+    background: #32b94f;
+    border-color: #32b94f;
+}
+
+.display-buttom .btn-sincronizar {
+    background: whitesmoke;
+    border-color: white;
+    display: none;
+}
 
 .display-pay-pal {
     display: none;

@@ -2,8 +2,6 @@
 <link href="stylesheets/style.css" rel="stylesheet">
 <link href="stylesheets/painel-style/style.css" rel="stylesheet">
 <script src="javascripts/axios.js"></script>
-<script src="javascripts/requestPage.js"></script>
-
 
 <div class="painel-primary">
 
@@ -12,7 +10,7 @@
             <img src="images/1280px-PayPal.svg.png">
         </div>
         <div class="content-input-value">
-            <input onkeyup="handleInputValue(event)" type="text" maxlength="9" placeholder="R$0,00" pattern="[0-9]+$"/>
+            <input id="inputValue" onkeyup="handleInputValue(event)" type="text" maxlength="9" placeholder="R$0,00" pattern="[0-9]+$"/>
         </div>
         <div class="display-buttom">
             <button id="btnConfirmar" class="btn-confirmar" type="button" onclick="handleButtomConfirmar(event)">
@@ -26,3 +24,5 @@
     </div>
 
 </div>
+
+<script src="javascripts/requestPage.js"></script>

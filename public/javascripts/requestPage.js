@@ -8,6 +8,9 @@ const elements = {
         btnConfirmar: document.getElementById('btnConfirmar'),
         btnPagar: document.getElementById('btnPagar'),
         btnSincronizar: document.getElementById('btnSincronizar')
+    },
+    inputs: {
+        inputValue: document.getElementById('inputValue')
     }
 };
 
@@ -66,7 +69,14 @@ function handleInputValue(event) {
 function handleButtomConfirmar() {
     api.post('/create-order', {value: content.value}).then(response => {
         const {data} = response;
-        content.order = data;
+
+        if (data.status === 'CREATED') {
+            content.order = data;
+            elements.buttons.btnConfirmar.style.display = 'none';
+            elements.buttons.btnPagar.style.display = 'block';
+            elements.buttons.btnSincronizar.style.display = 'block';
+            elements.inputs.inputValue.disabled = true;
+        }
     });
 }
 
@@ -74,8 +84,4 @@ function handleButtomPagar() {
     if (content.order) {
         window.open(content.order.link.href);
     }
-}
-
-function handleDisplayButtons() {
-
 }
