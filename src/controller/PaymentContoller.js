@@ -45,7 +45,7 @@ class PaymentContoller {
 
             if (status !== 'APPROVED') {
                 throw {
-                    mensagem: 'Pagamento aguardando aprovação'
+                    mensagem: 'Pagamento aguardando aprovação ou já foi completado.'
                 };
             }
 
