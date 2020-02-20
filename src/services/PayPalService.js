@@ -10,10 +10,6 @@ const api = axios.create({
     baseURL: acess.urlPayPal
 });
 
-// api.create({
-//     baseURL: acess.urlPayPal,
-// });
-
 class PayPalService {
 
     constructor() {
@@ -65,6 +61,27 @@ class PayPalService {
             throw e;
         }
 
+    }
+
+    async showOrder(idOrder) {
+        try {
+            const {data} = await api.get(`/v2/checkout/orders/${idOrder}`);
+            return data;
+        } catch (e) {
+            throw e;
+        }
+    }
+
+    async capturePayment(idOrder) {
+        console.log('kkkkk')
+        try {
+            console.log(idOrder)
+            api.defaults.headers.post['Content-Type'] = 'application/json';
+            const {data} = await api.post(`/v2/checkout/orders/${idOrder}/capture`);
+            return data;
+        } catch (e) {
+            throw e;
+        }
     }
 
 }

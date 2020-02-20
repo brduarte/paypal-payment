@@ -9,5 +9,6 @@ router.get('/', function (req, res) {
 });
 
 router.post('/create-order', paymentContoller.createOrder);
+router.post('/sync-payment', paymentContoller.syncPayment);
 
 module.exports = router;

@@ -151,17 +151,12 @@ async function createOrder(content) {
 }
 
 async function showStatusOrder(content) {
-
     try {
-
         const {data} = await api.get(`/v2/checkout/orders/51055589C9161644S`);
-
         return data.status;
-
     } catch (e) {
         console.log(e)
     }
-
 }
 
 async function capturePayment(content) {

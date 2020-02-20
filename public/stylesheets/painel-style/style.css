@@ -85,8 +85,8 @@
 .display-buttom .btn-sincronizar {
     background: #F5F5F5;
     border-color: #F5F5F5;
-    display: block;
     color: silver;
+    display: none;
 }
 
 .display-buttom .btn-sincronizar:hover {
