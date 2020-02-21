@@ -57,5 +57,5 @@ Para obter mais informações das ferramentas utilizadas:
 | :---: |
 
 <p align="center">
-  <img width="50%" src="https://github.com/brduarte/paypal-payment/blob/master/public/images/1280px-PayPal.svg.png?raw=true">
+ ## <img width="50%" src="https://github.com/brduarte/paypal-payment/blob/master/public/images/1280px-PayPal.svg.png?raw=true">
 </p>
