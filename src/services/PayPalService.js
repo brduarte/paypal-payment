@@ -73,9 +73,7 @@ class PayPalService {
     }
 
     async capturePayment(idOrder) {
-        console.log('kkkkk')
         try {
-            console.log(idOrder)
             api.defaults.headers.post['Content-Type'] = 'application/json';
             const {data} = await api.post(`/v2/checkout/orders/${idOrder}/capture`);
             return data;

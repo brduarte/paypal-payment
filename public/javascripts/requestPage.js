@@ -91,7 +91,7 @@ function handleButtomConfirmar() {
 }
 
 function handleButtonSincronizar() {
-    api.post('/create-order', {value: content.order.id}).then(response => {
+    api.post('/sync-payment', {id_order: content.order.id}).then(response => {
         const {data} = response;
         console.log(data)
     });

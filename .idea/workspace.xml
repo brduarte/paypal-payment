@@ -4,7 +4,7 @@
     <list default="true" id="4a5365a2-2ed6-439e-8709-a8b866f685ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/javascripts/requestPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/requestPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/PayPalService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/PayPalService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +91,7 @@
       <workItem from="1581428911265" duration="28642000" />
       <workItem from="1582054186841" duration="706000" />
       <workItem from="1582071663184" duration="4179000" />
+      <workItem from="1582284646265" duration="3585000" />
     </task>
     <task id="LOCAL-00001" summary="Salvando trabalho">
       <created>1581441296513</created>
@@ -176,10 +177,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="salvando trabalho" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="598" y="121" key="CommitChangelistDialog2" timestamp="1582228154166">
+    <state x="598" y="121" key="CommitChangelistDialog2" timestamp="1582228900728">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="598" y="121" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1582228154166" />
+    <state x="598" y="121" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1582228900728" />
     <state x="598" y="121" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581441295231" />
     <state width="1877" height="206" key="GridCell.Tab.0.bottom" timestamp="1582226977210">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -205,10 +206,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="772" y="235" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581432852348" />
-    <state x="668" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1582054249439">
+    <state x="668" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1582284646275">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1582054249439" />
+    <state x="668" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1582284646275" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1582135301740">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
