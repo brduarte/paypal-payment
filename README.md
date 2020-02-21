@@ -1,8 +1,14 @@
-Apanas uma forma de utilizar a API do PayPal para receber pagamentos
+
 
 # 💰 PayPal Payment
 
-# <img width="50%" src="https://github.com/brduarte/paypal-payment/blob/master/public/images/1280px-PayPal.svg.png?raw=true">
+<p>Apanas uma forma de utilizar a API do PayPal para receber pagamentos<p/>
+
+<p align="center">
+  <img width="50%" src="https://github.com/brduarte/paypal-payment/blob/master/public/images/1280px-PayPal.svg.png?raw=true">
+</p>
+
+
 
 ## ⚒️ Ferramentas utilizadas 
   
