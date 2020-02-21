@@ -10,12 +10,37 @@
 
 Assegure-se de ter [Node.js](http://nodejs.org/) instalado
 
+- 1º Clone o projeto:
+
 ```shell script
 $ git https://github.com/brduarte/paypal-payment.git # ou clone seu próprio fork
-$ cd paypal-payment
+```
+
+- 2º Você precisa ativar API do [Distance Matrix API](https://developers.google.com/maps/documentation/distance-matrix/start) do Google Maps
+- 3º Na pasta raiz é preciso renomear o arquivo 'config.exemplo.js' para 'config.js'
+
+Ex: /config.js
+```js script
+    googleAPi: {
+        maps: {
+            url: "https://maps.googleapis.com/maps",
+            distanceMatrix: {
+                uri: 'api/distancematrix/json',
+                language: "pt-BR",
+                units: "matric",
+                key: ""
+            }
+        }
+    }
+```
+
+- 4º depois é só executar o projeto
+
+```shell script
 $ npm install
 $ npm start
 ```
+
 Seu aplicativo agora deve estar sendo executado em [localhost:3000](http://localhost:3000/).
 
 Você pode fazer um teste rápido em: [https://paypal-payment.herokuapp.com/](https://paypal-payment.herokuapp.com/)
