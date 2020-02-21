@@ -20,7 +20,7 @@ Seu aplicativo agora deve estar sendo executado em [localhost:3000](http://local
 
 Você pode fazer um teste rápido em: [https://paypal-payment.herokuapp.com/](https://paypal-payment.herokuapp.com/)
 
-## 📝 Documentaçôes 
+## 📝 Documentações 
 
 Para obter mais informações das ferramentas utilizadas:
 
