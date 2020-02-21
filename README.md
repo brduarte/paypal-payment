@@ -11,8 +11,8 @@
 Assegure-se de ter [Node.js](http://nodejs.org/) instalado
 
 ```shell script
-$ git clone https://github.com/brduarte/Jogo-Multiplayer.git # ou clone seu próprio fork
-$ cd Jogo-Multiplayer
+$ git https://github.com/brduarte/paypal-payment.git # ou clone seu próprio fork
+$ cd paypal-payment
 $ npm install
 $ npm start
 ```
