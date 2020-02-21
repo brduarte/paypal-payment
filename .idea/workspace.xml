@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a5365a2-2ed6-439e-8709-a8b866f685ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/config/AcessServices.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meu robozinho lindo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/AcessServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/AcessServices.exemplo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/PayPalService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/PayPalService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +49,17 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.watch">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -63,6 +73,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.watch" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -92,7 +103,7 @@
       <workItem from="1581428911265" duration="28642000" />
       <workItem from="1582054186841" duration="706000" />
       <workItem from="1582071663184" duration="4179000" />
-      <workItem from="1582284646265" duration="3928000" />
+      <workItem from="1582284646265" duration="8429000" />
     </task>
     <task id="LOCAL-00001" summary="Salvando trabalho">
       <created>1581441296513</created>
@@ -171,7 +182,21 @@
       <option name="project" value="LOCAL" />
       <updated>1582291266351</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="salvando trabalho">
+      <created>1582291535670</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1582291535670</updated>
+    </task>
+    <task id="LOCAL-00013" summary="salvando trabalho">
+      <created>1582292501018</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1582292501018</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,30 +210,30 @@
     <option name="LAST_COMMIT_MESSAGE" value="salvando trabalho" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="598" y="121" key="CommitChangelistDialog2" timestamp="1582291264838">
+    <state x="598" y="121" key="CommitChangelistDialog2" timestamp="1582304129552">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="598" y="121" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1582291264838" />
+    <state x="598" y="121" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1582304129552" />
     <state x="598" y="121" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581441295231" />
-    <state width="1877" height="206" key="GridCell.Tab.0.bottom" timestamp="1582226977210">
+    <state width="1877" height="206" key="GridCell.Tab.0.bottom" timestamp="1582302501369">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1582226977210" />
+    <state width="1877" height="206" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1582302501369" />
     <state width="1899" height="162" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582075583790" />
-    <state width="1877" height="206" key="GridCell.Tab.0.center" timestamp="1582226977210">
+    <state width="1877" height="206" key="GridCell.Tab.0.center" timestamp="1582302501369">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1582226977210" />
+    <state width="1877" height="206" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1582302501369" />
     <state width="1899" height="162" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582075583790" />
-    <state width="1877" height="206" key="GridCell.Tab.0.left" timestamp="1582226977210">
+    <state width="1877" height="206" key="GridCell.Tab.0.left" timestamp="1582302501369">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1582226977210" />
+    <state width="1877" height="206" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1582302501369" />
     <state width="1899" height="162" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582075583790" />
-    <state width="1877" height="206" key="GridCell.Tab.0.right" timestamp="1582226977210">
+    <state width="1877" height="206" key="GridCell.Tab.0.right" timestamp="1582302501369">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1582226977210" />
+    <state width="1877" height="206" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1582302501369" />
     <state width="1899" height="162" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582075583790" />
     <state x="772" y="235" key="RollbackChangesDialog" timestamp="1581432852348">
       <screen x="0" y="0" width="1920" height="1040" />
