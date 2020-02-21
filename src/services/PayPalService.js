@@ -2,7 +2,7 @@ const axios = require('axios');
 const {payPal} = require('../config/AcessServices');
 
 const api = axios.create({
-    baseURL: acess.urlPayPal
+    baseURL: payPal.urlPayPal
 });
 
 class PayPalService {
