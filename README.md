@@ -1,5 +1,7 @@
 # 💰 PayPal Payment
 
+|<img width="50%" src="https://github.com/brduarte/Distancias-Maps/blob/master/img.gif">
+
 ## ⚒️ Ferramentas utilizadas 
   
   - Node.js
