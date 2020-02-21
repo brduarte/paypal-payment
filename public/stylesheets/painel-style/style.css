@@ -1,0 +1,107 @@
+.painel-primary {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.painel-calc {
+    width: 25%;
+    background: white;
+    -webkit-box-shadow: 10px 7px 19px -16px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 7px 19px -16px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 7px 19px -16px rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.hader-logo {
+    margin: auto;
+    width: 70%;
+}
+
+.hader-logo img {
+    width: 100%;
+}
+
+.content-input-value input {
+    border: 2px solid #F5F5F5;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 45px;
+    font-weight: bold;
+    color: #203881;
+    text-align: center;
+}
+
+.content-input-value input:hover {
+    border-color: #203881;
+}
+
+.content-input-value input::placeholder {
+    color: #e5e5e5;
+}
+
+.content-input-value input:disabled {
+    border-color: white;
+}
+
+.display-buttom button {
+    width: 100%;
+    padding: 10px;
+    font-family: "Roboto";
+    font-size: 22px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+    transition: 0.5s;
+    border: 1px solid white;
+}
+
+.display-buttom .btn-confirmar {
+    background: #203881;
+    border-color: #203881;
+}
+
+.display-buttom .btn-confirmar:hover {
+    background: #0F9CD8;
+    border-color: #0F9CD8;
+}
+
+.display-buttom .btn-pagar {
+    background: #218838;
+    border-color: #218838;
+    display: none;
+
+}
+
+.display-buttom .btn-pagar:hover {
+    background: rgba(46, 167, 74, 0.89);
+    border-color: rgba(46, 167, 74, 0.89);
+}
+
+.display-buttom .btn-sincronizar {
+    background: #F5F5F5;
+    border-color: #F5F5F5;
+    color: silver;
+    display: none;
+}
+
+.display-buttom .btn-sincronizar:hover {
+    background-color: #ffffff;
+    border-color: silver;
+    color: #d6d6d6;
+}
+
+.display-pay-pal {
+    display: none;
+}
+
+.display-pay-pal iframe {
+    border: none;
+    width: 100%;
+    height: 400px;
+    margin-top: 5px;
+}
