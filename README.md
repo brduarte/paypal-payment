@@ -2,9 +2,6 @@
 
 # 💰 PayPal Payment
 
-
-# 📖 Descrição
-
 Demonstração de gateway de pagamento utilizando a API REST do PayPal
 
 ## ⚒️ Ferramentas utilizadas 
