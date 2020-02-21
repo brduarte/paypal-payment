@@ -4,7 +4,7 @@
   
   - Node.js
   - Express
-  - Socket.io
+  - PayPal API REST
 
 ## 👨‍💻 Executando localmente 
 
