@@ -1,6 +1,5 @@
 const axios = require('axios');
-const {payPal} = require('../config/AcessServices.exemplo');
-
+const {payPal} = require('../config/AcessServices');
 const api = axios.create({
     baseURL: payPal.urlPayPal
 });
@@ -17,17 +16,19 @@ class PayPalService {
             //Usando application/x-www-form-urlencoded format
             const params = new URLSearchParams();
             params.append('grant_type', 'client_credentials');
-            const {data} = await api.post(payPal.urlPayPal + '/v1/oauth2/token', params, {
+            const {data} = await api.post( '/v1/oauth2/token', params, {
                 auth: {
                     username: payPal.username,
                     password: payPal.password,
                 },
             });
 
+
+
             api.defaults.headers.common['Authorization'] = `Bearer ${data.access_token}`;
 
         } catch (e) {
-            throw e;
+            throw 'Erro ao logar';
         }
 
     }
