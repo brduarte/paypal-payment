@@ -1,5 +1,5 @@
 const api = axios.create({
-    baseURL: 'http://localhost:3000'
+    baseURL: window.location.href
 });
 
 const content = {};
