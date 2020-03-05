@@ -82,17 +82,35 @@ function handleDisplay() {
 function handleButtomConfirmar() {
     api.post('/create-order', {value: content.value}).then(response => {
         const {data} = response;
-
-        if (data.status === 'CREATED') {
+        if (data.payPalResponse.status === 'CREATED') {
             content.order = data;
+            notify({
+                type: 'success',
+                message: data.payPalResponse.menssage
+            });
             handleDisplay();
         }
     });
 }
 
 function handleButtonSincronizar() {
+
     api.post('/sync-payment', {id_order: content.order.id}).then(response => {
-        const {data} = response;
-        console.log(data)
+
+        const {payPalResponse} = response;
+
+        if (mensagem) {
+            notify({
+                type: 'warning',
+                message: payPalResponse.menssage
+            });
+        } else {
+            notify({
+                type: 'warning',
+                message: 'Erro interno'
+            });
+        }
+
     });
 }
+

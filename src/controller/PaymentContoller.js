@@ -1,4 +1,5 @@
 const PayPalService = require('../services/PayPalService');
+const MensageService = require('../services/MessageService');
 
 const payPalService = new PayPalService();
 
@@ -17,10 +18,13 @@ class PaymentContoller {
 
             const {id, links, status} = await payPalService.createOrder(value);
 
+            const payPalResponse = MensageService.getMessageStatus(status);
+
             let response = {
                 id,
-                status,
+                payPalResponse
             };
+
             links.map((link, index) => {
                 if (link.rel === 'approve') {
                     response = {...response, link}
@@ -33,24 +37,32 @@ class PaymentContoller {
         }
     }
 
-
     static async syncPayment(req, res) {
         try {
             const {id_order} = req.body;
             const {status} = await payPalService.showOrder(id_order);
-
+            console.log(status)
+            ;
             if (!id_order) throw {
                 mensagem: 'id_order order é obrigatorio.'
             };
 
+            let response = '';
             if (status !== 'APPROVED') {
-                throw {
+                response = {
                     mensagem: 'Pagamento aguardando autorização.'
                 };
             }
 
-            const response = await payPalService.capturePayment(id_order);
-            return res.json(response);
+            const {newStatus} = await payPalService.capturePayment(id_order);
+
+            if (newStatus === 'COMPLETED') {
+                response = {
+                    mensagem: 'Tranzação completada',
+                };
+            }
+
+            res.json(response);
 
         } catch (e) {
             res.json(e)

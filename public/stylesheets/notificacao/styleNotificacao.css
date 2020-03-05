@@ -1,0 +1,36 @@
+.notificacao {
+    position: fixed;
+    top: 0;
+    text-align: center;
+    font-family: 'Roboto';
+    color: white;
+    animation-name: exiberNotify;
+    animation-duration: 1s;
+    display: none;
+    width: 100%;
+}
+
+.notificacao .notify {
+    padding: 6px;
+}
+
+.notificacao .n-error {
+    background-color: red;
+}
+
+.notificacao .n-warning {
+    background-color: #FFEB3B;
+}
+
+.notificacao .n-success {
+    background-color: green;
+}
+
+@keyframes exiberNotify {
+    from {
+        top: -50px;
+    }
+    to {
+        top: 0;
+    }
+}
