@@ -39,10 +39,10 @@ class PaymentContoller {
 
     static async syncPayment(req, res) {
         try {
+
             const {id_order} = req.body;
             const {status} = await payPalService.showOrder(id_order);
-            console.log(status)
-            ;
+
             if (!id_order) throw {
                 mensagem: 'id_order order é obrigatorio.'
             };
@@ -50,19 +50,17 @@ class PaymentContoller {
             let response = '';
             if (status !== 'APPROVED') {
                 response = {
-                    mensagem: 'Pagamento aguardando autorização.'
+                    payPalResponse: MensageService.getMessageStatus(status),
                 };
+                return res.json(response);
             }
 
             const {newStatus} = await payPalService.capturePayment(id_order);
+            response = {
+                payPalResponse: MensageService.getMessageStatus(newStatus)
+            };
 
-            if (newStatus === 'COMPLETED') {
-                response = {
-                    mensagem: 'Tranzação completada',
-                };
-            }
-
-            res.json(response);
+            return res.json(response);
 
         } catch (e) {
             res.json(e)

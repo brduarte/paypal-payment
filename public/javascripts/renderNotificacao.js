@@ -45,6 +45,6 @@ function notify(notify) {
     setTimeout( function () {
         displayNotificacao.innerHTML = '';
         displayNotificacao.style.display = 'none';
-    }, 3000);
+    }, 4000);
 
 }

@@ -94,20 +94,18 @@ function handleButtomConfirmar() {
 }
 
 function handleButtonSincronizar() {
-
     api.post('/sync-payment', {id_order: content.order.id}).then(response => {
+        const {payPalResponse} = response.data;
 
-        const {payPalResponse} = response;
-
-        if (mensagem) {
+        if (payPalResponse.status === 'COMPLETED') {
             notify({
-                type: 'warning',
+                type: 'success',
                 message: payPalResponse.menssage
             });
         } else {
             notify({
                 type: 'warning',
-                message: 'Erro interno'
+                message: payPalResponse.menssage
             });
         }
 
