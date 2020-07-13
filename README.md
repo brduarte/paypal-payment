@@ -45,7 +45,10 @@ Você pode fazer um teste rápido em: [https://paypal-payment.herokuapp.com/](ht
 
 ## Rodando com container Docker
 
-[Docker Container](https://github.com/PrenticeRoosevelt/Docker_Paypal)
+[Docker Container](https://github.com/PrenticeRoosevelt/Docker_Paypal)  
+<p align="center">
+  <img width="10%" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fvertigo.com.br%2Fagile-logo-docker%2F&psig=AOvVaw0oPLCL4ZO0LhFLHlzKTjvb&ust=1594700543430000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMDwyMywyeoCFQAAAAAdAAAAABAI">
+</p>
 
 ## 📝 Documentações 
 
