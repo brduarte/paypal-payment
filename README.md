@@ -43,11 +43,12 @@ Seu aplicativo agora deve estar sendo executado em [localhost:3000](http://local
 
 Você pode fazer um teste rápido em: [https://paypal-payment.herokuapp.com/](https://paypal-payment.herokuapp.com/)
 
-## Rodando com container Docker
+## 🐳 Rodando com container Docker
 
 [Docker Container](https://github.com/PrenticeRoosevelt/Docker_Paypal)  
-<p align="center">
-  <img width="10%" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fvertigo.com.br%2Fagile-logo-docker%2F&psig=AOvVaw0oPLCL4ZO0LhFLHlzKTjvb&ust=1594700543430000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMDwyMywyeoCFQAAAAAdAAAAABAI">
+
+<p align="end">
+  <img width="125px" src="https://www.docker.com/sites/default/files/d8/styles/role_icon/public/2019-07/vertical-logo-monochromatic.png?itok=erja9lKc">
 </p>
 
 ## 📝 Documentações 
