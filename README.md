@@ -43,6 +43,9 @@ Seu aplicativo agora deve estar sendo executado em [localhost:3000](http://local
 
 Você pode fazer um teste rápido em: [https://paypal-payment.herokuapp.com/](https://paypal-payment.herokuapp.com/)
 
+Como rodar com o [Docker Container](https://github.com/PrenticeRoosevelt/Docker_Paypal)
+
+
 ## 📝 Documentações 
 
 Para obter mais informações das ferramentas utilizadas:
